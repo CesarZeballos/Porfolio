@@ -1,3 +1,4 @@
+import { Roboto_Condensed, Roboto } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,13 +9,27 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        white: "#DBE2E",
+        lightGreen: "#C2F22D",
+        darkGreen: "#163300",
+        lightBlue: "#2A3546",
+        darkBlue: "#000E26",
       },
+
+      fontFamily: {
+        Roboto: ["Roboto", "sans-serif"],
+        RobotoCondensed: ["Roboto Condensed", "sans-serif"],
+      },
+
+      spacing: {
+        'small': '1rem',
+        'marginY': '9rem',
+        'marginX': '25rem'
+      }
     },
   },
   plugins: [],
 };
 export default config;
+  
