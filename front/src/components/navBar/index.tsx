@@ -2,7 +2,6 @@
 import Link from "next/link"
 import IconButton from "../iconButton"
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
-import IconButton2 from "../iconButton2";
 import TranslateIcon from '@mui/icons-material/Translate';
 import { usePathname } from "next/navigation";
 
@@ -11,8 +10,8 @@ const NavBar: React.FC = () => {
     const pathname = usePathname();
 
     return (
-        <div className="px-marginX py-small bg-darkGreen bg-opacity-50 flex flex-row items-center justify-between">
-            <div className="flex flex-row items-center gap-6">
+        <div className="px-marginX py-small backdrop-blur-sm bg-darkGreen bg-opacity-50 flex flex-row items-center justify-between">
+            <div className="flex flex-row items-center gap-8">
                 <Link 
                 className={`buttonNavBar ${pathname === '/' ? 'buttonNavBar--active' : ''}`}
                 href="/">
@@ -43,7 +42,7 @@ const NavBar: React.FC = () => {
                     <IconButton icon={<CloudDownloadIcon />} label="Download CV" />
                 </a>
             </div>
-            <IconButton2 icon={<TranslateIcon />}/>
+            <button className="iconButton2"><TranslateIcon fontSize="inherit"/></button>
         </div>
     )
 }

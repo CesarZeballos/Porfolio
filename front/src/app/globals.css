@@ -40,7 +40,7 @@ body {
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
   transition-duration: 400ms;
   transition-property: color;
-  @apply font-RobotoCondensed font-semibold text-base
+  @apply font-RobotoCondensed font-medium text-sm
 }
 
 .buttonNavBar:focus,
@@ -78,31 +78,26 @@ body {
 }
 
 .buttonPrimary {
-  border: 1px solid #C2F22D;
-  border-radius: 50px;
   position: relative;
   overflow: hidden;
-  background-color: #C2F22D;
-  text-align: center;
   text-transform: uppercase;
   transition: .3s;
   z-index: 1;
-  color: #000E26;
-  @apply px-5 py-2 font-RobotoCondensed font-semibold text-base
+  @apply px-5 py-2 font-RobotoCondensed font-semibold text-sm rounded-full border border-lightGreen bg-lightGreen text-darkBlue flex items-center
  }
  
  .buttonPrimary::before {
   content: '';
   width: 0;
-  height: 300%;
+  height: 500%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  background: #163300;
   transition: .5s ease;
   display: block;
   z-index: -1;
+  @apply bg-darkGreen
  }
  
  .buttonPrimary:hover::before {
@@ -110,8 +105,7 @@ body {
  }
  
  .buttonPrimary:hover {
-  color: #DBE2EC;
-  border: 1px solid #163300;
+  @apply text-white border border-darkGreen
  }
 
  .buttonSecondary {
@@ -125,7 +119,7 @@ body {
   justify-content: center;
   cursor: pointer;
   position: relative; 
-  @apply px-5 py-2 font-RobotoCondensed font-semibold text-base text-darkBlue bg-white rounded-full;
+  @apply px-5 py-2 font-RobotoCondensed font-semibold text-sm text-darkBlue bg-white rounded-full;
 }
 
 .iconButton span {
@@ -160,7 +154,7 @@ body {
 }
 
 .iconButton2 {
-  @apply text-base p-2 border-white border-2 text-white rounded-full
+  @apply text-base p-2 border-white border-2 text-white rounded-full flex items-center justify-center
   hover:bg-lightBlue 
   hover:border-lightBlue
 }

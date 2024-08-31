@@ -25,7 +25,8 @@ const config: Config = {
       spacing: {
         'small': '1rem',
         'marginY': '5rem',
-        'marginX': '12rem'
+        'marginX': '12rem',
+        'nav': '5rem'
       }
     },
   },
