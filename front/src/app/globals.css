@@ -68,6 +68,15 @@ body {
   transition-property: width, left;
 }
 
+.buttonNavBar--active {
+  color: #C2F22D;
+}
+
+.buttonNavBar--active:after {
+  width: 100%;
+  left: 0%;
+}
+
 .buttonPrimary {
   border: 1px solid #C2F22D;
   border-radius: 50px;
@@ -115,21 +124,20 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 50px;
   position: relative; 
   @apply px-5 py-2 font-RobotoCondensed font-semibold text-base text-darkBlue bg-white rounded-full;
 }
 
 .iconButton span {
   display: block;
-  margin-left: 16px;
+  margin-left: 32px;
   transition: all 0.1s ease-in-out;
 }
 
 .iconButton .MuiSvgIcon-root {
   transition: transform 0.3s ease-in-out, left 0.3s ease-in-out;
   position: absolute; 
-  left: 8px;
+  left: 20px;
 }
 
 .iconButton:hover {
