@@ -1,4 +1,7 @@
 import Image from "next/image";
+import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import IconButton from "@/components/iconButton";
+import IconButton2 from "@/components/iconButton2";
 
 export default function Home() {
   return (
@@ -38,6 +41,9 @@ export default function Home() {
           priority
         />
       </div>
+
+      <button className="buttonSecondary">Get started</button>
+      <IconButton2 icon={<ArrowCircleDownIcon />} />
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <a

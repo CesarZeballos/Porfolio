@@ -2,32 +2,171 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gradient-to-b from-darkGreen to-darkBlue
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.sectionContainer {
+  @apply mx-marginX my-marginY
 }
+
+.h1 {
+  @apply font-RobotoCondensed font-bold text-5xl
+}
+
+.h2 {
+  @apply font-RobotoCondensed font-bold text-4xl
+}
+
+.h3 {
+@apply font-RobotoCondensed font-bold text-2xl
+}
+
+.label {
+  @apply font-RobotoCondensed font-semibold text-base
+}
+
+.body {
+  @apply font-Roboto font-normal text-base
+}
+
+.buttonNavBar {
+  color: #DBE2EC;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  @apply font-RobotoCondensed font-semibold text-base
+}
+
+.buttonNavBar:focus,
+.buttonNavBar:hover {
+  color: #C2F22D;
+}
+
+.buttonNavBar:focus:after,
+.buttonNavBar:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.buttonNavBar:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #C2F22D;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.buttonPrimary {
+  border: 1px solid #C2F22D;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  background-color: #C2F22D;
+  text-align: center;
+  text-transform: uppercase;
+  transition: .3s;
+  z-index: 1;
+  color: #000E26;
+  @apply px-5 py-2 font-RobotoCondensed font-semibold text-base
+ }
+ 
+ .buttonPrimary::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #163300;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+ 
+ .buttonPrimary:hover::before {
+  width: 105%;
+ }
+ 
+ .buttonPrimary:hover {
+  color: #DBE2EC;
+  border: 1px solid #163300;
+ }
+
+ .buttonSecondary {
+  @apply px-5 py-2 font-Roboto font-normal text-base text-white
+  hover:text-lightGreen
+ }
+
+ .iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative; 
+  @apply px-5 py-2 font-RobotoCondensed font-semibold text-base text-darkBlue bg-white rounded-full;
+}
+
+.iconButton span {
+  display: block;
+  margin-left: 16px;
+  transition: all 0.1s ease-in-out;
+}
+
+.iconButton .MuiSvgIcon-root {
+  transition: transform 0.3s ease-in-out, left 0.3s ease-in-out;
+  position: absolute; 
+  left: 8px;
+}
+
+.iconButton:hover {
+  @apply bg-lightBlue;
+}
+
+.iconButton:hover .MuiSvgIcon-root {
+  left: calc(50% - 24px);
+  transform: translateX(50%) scale(1.2);
+  color: #dbe2ec;
+}
+
+.iconButton:hover span {
+  opacity: 0;
+  transition: 0.5s linear;
+}
+
+.iconButton:active {
+  transform: scale(0.95);
+}
+
+.iconButton2 {
+  @apply text-base p-2 border-white border-2 text-white rounded-full
+  hover:bg-lightBlue 
+  hover:border-lightBlue
+}
+
+.iconButton2:hover .MuiSvgIcon-root {
+  transform: translateX(0) scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
