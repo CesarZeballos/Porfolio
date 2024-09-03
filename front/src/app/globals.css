@@ -109,8 +109,8 @@ body {
  }
 
  .buttonSecondary {
-  @apply px-5 py-2 font-Roboto font-normal text-base text-white
-  hover:text-lightGreen
+  @apply px-5 py-2 font-Roboto font-normal text-base text-lightGreen
+  hover:text-white
  }
 
  .iconButton {
