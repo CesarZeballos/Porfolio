@@ -9,3 +9,14 @@ export interface IRole {
     title: string,
     description: string
 }
+
+export interface ISkill {
+    index: number,
+    name: string,
+    icon: React.ReactElement
+}
+
+export interface ITools {
+    color: string
+    skills: ISkill
+}
