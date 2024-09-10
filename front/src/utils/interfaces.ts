@@ -31,3 +31,10 @@ export interface IStrength {
 export interface IPropChildren {
     children: React.ReactNode
 }
+
+export interface IExperience {
+    index: number, 
+    name: string,
+    description1: string,
+    description2: string
+}
