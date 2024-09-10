@@ -10,6 +10,15 @@ body {
   @apply mx-marginX my-marginY
 }
 
+.noScrollBar::-webkit-scrollbar {
+  display: none; /* Ocultar scroll en navegadores basados en WebKit */
+}
+
+.noScrollBar {
+  -ms-overflow-style: none; /* Ocultar scroll en Internet Explorer y Edge */
+  scrollbar-width: none; /* Ocultar scroll en Firefox */
+}
+
 .h1 {
   @apply font-RobotoCondensed font-bold text-5xl uppercase
 }

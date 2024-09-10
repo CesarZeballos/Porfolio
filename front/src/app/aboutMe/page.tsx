@@ -1,5 +1,6 @@
 import { PresentationAbout } from "@/components/presentationAbout"
 import { Skills } from "@/components/skills"
+import { StrengthsContainer } from "@/components/strengthsContainer"
 
 
 const AboutMe: React.FC = () => {
@@ -8,6 +9,7 @@ const AboutMe: React.FC = () => {
         <div>
             <PresentationAbout/>
             <Skills/>
+            <StrengthsContainer/>
         </div>
     )
 }

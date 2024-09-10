@@ -20,3 +20,14 @@ export interface ITools {
     color: string
     skills: ISkill
 }
+
+export interface IStrength {
+    index: number,
+    name: string,
+    description: string,
+    icon: React.ReactElement
+}
+
+export interface IPropChildren {
+    children: React.ReactNode
+}
