@@ -39,6 +39,10 @@ body {
   @apply font-Roboto font-normal text-base
 }
 
+.bodyBold {
+  @apply font-Roboto font-bold text-base
+}
+
 .buttonNavBar {
   color: #DBE2EC;
   cursor: pointer;

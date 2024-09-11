@@ -1,3 +1,4 @@
+import { Certifications } from "@/components/certifications"
 import { Experience } from "@/components/experience"
 import { PresentationAbout } from "@/components/presentationAbout"
 import { Skills } from "@/components/skills"
@@ -12,6 +13,7 @@ const AboutMe: React.FC = () => {
             <Skills/>
             <StrengthsContainer/>
             <Experience/>
+            <Certifications/>
         </div>
     )
 }

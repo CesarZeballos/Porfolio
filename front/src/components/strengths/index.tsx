@@ -22,7 +22,7 @@ export const Strengths = (data: IStrength) => {
                 <div className="flex flex-col gap-2">
                     <div className="flex flex-row gap-2 items-end">
                         <p className="text-2xl text-darkBlue">{icon}</p>
-                        <p className="body text-darkBlue">{name}</p>
+                        <p className="bodyBold text-darkBlue">{name}</p>
                     </div>
                     <p className="body text-darkBlue">{description}</p>
                 </div>

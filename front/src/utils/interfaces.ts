@@ -38,3 +38,9 @@ export interface IExperience {
     description1: string,
     description2: string
 }
+
+export interface ICertificate {
+    index: number,
+    imagen: string,
+    title: string,
+}
