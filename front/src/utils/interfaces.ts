@@ -44,3 +44,15 @@ export interface ICertificate {
     imagen: string,
     title: string,
 }
+
+export interface IContact {
+    name: string,
+    email: string,
+    message: string
+}
+
+export interface IContactError {
+    name: string,
+    email: string,
+    message: string
+}

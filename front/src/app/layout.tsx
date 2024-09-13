@@ -4,6 +4,8 @@ import "./globals.css";
 import NavBar from "@/components/navBar";
 import Footer from "@/components/footer";
 import { AOSConfig } from "@/utils/AOSConfig";
+import Providers from "@/redux/provider";
+import { Contact } from "@/components/contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-          <AOSConfig />
-          <nav className="fixed top-0 left-0 w-full z-50">
-            <NavBar />
-          </nav>
-          {children}
-          <Footer />
+          <Providers>
+            <nav className="fixed top-0 left-0 w-full z-50">
+              <NavBar />
+            </nav>
+            {children}
+            <Footer />
+            <Contact />
+          </Providers>
       </body>
     </html>
   );

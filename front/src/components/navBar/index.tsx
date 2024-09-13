@@ -4,10 +4,17 @@ import IconButton from "../iconButton"
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import TranslateIcon from '@mui/icons-material/Translate';
 import { usePathname } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { setContactState } from "@/redux/slice";
 
 
 const NavBar: React.FC = () => {
     const pathname = usePathname();
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(setContactState())
+    }
 
     return (
         <div className="px-marginX py-small backdrop-blur-sm bg-darkGreen bg-opacity-50 flex flex-row items-center justify-between">
@@ -30,11 +37,11 @@ const NavBar: React.FC = () => {
                     Portfolio
                 </Link>
                 
-                <Link 
-                className={`buttonNavBar ${pathname === '/contact' ? 'buttonNavBar--active' : ''}`}
-                href="/contact">
+                <button
+                className={`buttonNavBar`}
+                onClick={handleClick}>
                     Contact
-                </Link>
+                </button>
                 
                 <a
                 href="/CV-CesarEZeballos.pdf"
