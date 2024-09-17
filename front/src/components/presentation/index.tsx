@@ -1,8 +1,17 @@
+'use client'
 import Link from "next/link"
 import Profile from "../image"
+import { useDispatch } from "react-redux";
+import { setContactState } from "@/redux/slice";
 
 
 export const Presentation: React.FC = () => {
+    const dispatch = useDispatch();
+
+    const handleClick = () => {
+        dispatch(setContactState())
+    }
+    
     return (
         <div className="sectionContainer grid grid-cols-2">
             <div className="flex flex-col gap-6 items-start justify-center">
@@ -11,7 +20,7 @@ export const Presentation: React.FC = () => {
                 <p className="body text-white">My focus is on understanding user needs and translating them into visually appealing and technically sound solutions.</p>
                 <div className="flex flex-row gap-4">
                     <Link href="/portfolio" className="buttonSecondary">Discover my work</Link>
-                    <Link href="/contact" className="buttonPrimary">Connect with me</Link>
+                    <button onClick={handleClick} className="buttonPrimary">Connect with me</button>
                 </div>
             </div>
             

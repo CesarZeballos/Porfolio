@@ -96,7 +96,7 @@ body {
   text-transform: uppercase;
   transition: .3s;
   z-index: 1;
-  @apply px-5 py-2 font-RobotoCondensed font-semibold text-sm rounded-full border border-lightGreen bg-lightGreen text-darkBlue flex items-center
+  @apply px-5 py-2 font-RobotoCondensed font-semibold text-sm rounded-full border border-lightGreen bg-lightGreen text-darkBlue flex items-center gap-2 w-fit
  }
  
  .buttonPrimary::before {
@@ -122,7 +122,7 @@ body {
  }
 
  .buttonSecondary {
-  @apply px-5 py-2 font-Roboto font-normal text-base text-lightGreen
+  @apply px-5 py-2 font-Roboto font-normal text-base text-lightGreen flex flex-row gap-2 items-center
   hover:text-white
  }
 

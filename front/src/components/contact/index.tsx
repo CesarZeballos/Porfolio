@@ -8,6 +8,11 @@ import CloseIcon from '@mui/icons-material/Close';
 import { CustomInput } from "../customInput";
 import { IContact } from "@/utils/interfaces";
 
+// icons
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 export const Contact: React.FC = () => {
     const contactRef = useRef<HTMLDivElement>(null)
     const [data, setData] = useState<IContact>({} as IContact)
@@ -52,7 +57,7 @@ export const Contact: React.FC = () => {
             {
                 showContact && 
 
-            <div className="absolute bottom-0 left-0 z-50 w-full h-full grid grid-cols-3 backdrop-blur-sm bg-opacity-20 bg-darkGreen">
+            <div className="fixed bottom-0 z-50 w-full h-full grid grid-cols-3 backdrop-blur-sm bg-opacity-20 bg-darkGreen">
                 <div className="col-span-2"></div>
                 <div ref={contactRef} className="relative left-0 w-full h-full rounded-l-3xl bg-lightBlue p-6 flex flex-col items-start">
                     <button onClick={handleClose} className="iconButton2"> 
@@ -67,7 +72,13 @@ export const Contact: React.FC = () => {
                             <button className="buttonSecondary" onClick={handleCancel}>Maybe later</button>
                             <button className="buttonPrimary" type="submit">Send</button>
                         </div>
-                    </form> 
+                    </form>
+                    <div className="flex flex-col gap-1 w-full px-9">
+                        <p className="body text-white flex flex-row gap-1 items-center"><LinkedInIcon fontSize="inherit" className="text-lightGreen"/>/cesarzeballos</p>
+                        <p className="body text-white flex flex-row gap-1 items-center"><WhatsAppIcon fontSize="inherit" className="text-lightGreen"/>+549 351 7048769</p>
+                        <p className="body text-white flex flex-row gap-1 items-center"><EmailIcon fontSize="inherit" className="text-lightGreen"/>cesarezeballos@gmail.com</p>
+
+                    </div>
                 </div>
             </div>
             }

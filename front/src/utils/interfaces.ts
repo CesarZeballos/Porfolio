@@ -56,3 +56,16 @@ export interface IContactError {
     email: string,
     message: string
 }
+
+export interface IPortfolio {
+    index: number,
+    title: string,
+    type: string,
+    description: string,
+    image: string,
+    github?: string,
+    vercel?: string,
+    figma?: string,
+    behance?: string
+
+}

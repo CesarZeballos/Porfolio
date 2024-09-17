@@ -9,10 +9,10 @@ interface MyButtonProps {
 
 const IconButton: React.FC<MyButtonProps> = ({ icon, label }) => {
   return (
-    <button className="iconButton">
+    <div className="iconButton">
       {icon}
       <span>{label}</span>
-    </button>
+    </div>
   );
 };
 
