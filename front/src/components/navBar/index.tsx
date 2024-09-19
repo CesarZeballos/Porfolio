@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { setContactState } from "@/redux/slice";
 
+import { SlCloudDownload } from "react-icons/sl";
+
 
 const NavBar: React.FC = () => {
     const pathname = usePathname();
@@ -46,7 +48,7 @@ const NavBar: React.FC = () => {
                 <a
                 href="/CV-CesarEZeballos.pdf"
                 download={"CV-CesarEZeballos.pdf"}>
-                    <IconButton icon={<CloudDownloadIcon />} label="Download CV" />
+                    <IconButton icon={<SlCloudDownload size={16} />} label="Download CV" />
                 </a>
             </div>
             <button className="iconButton2"><TranslateIcon fontSize="inherit"/></button>

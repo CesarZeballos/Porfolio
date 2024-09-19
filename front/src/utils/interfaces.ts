@@ -41,7 +41,7 @@ export interface IExperience {
 
 export interface ICertificate {
     index: number,
-    imagen: string,
+    image: string,
     title: string,
 }
 

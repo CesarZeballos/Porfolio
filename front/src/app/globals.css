@@ -132,27 +132,27 @@ body {
   justify-content: center;
   cursor: pointer;
   position: relative; 
-  @apply px-5 py-2 font-RobotoCondensed font-semibold text-sm text-darkBlue bg-white rounded-full;
+  @apply px-5 py-2 font-RobotoCondensed font-semibold text-sm text-darkBlue bg-white rounded-full w-fit;
 }
 
 .iconButton span {
   display: block;
-  margin-left: 32px;
+  margin-left: 24px;
   transition: all 0.1s ease-in-out;
 }
 
-.iconButton .MuiSvgIcon-root {
+.iconButton svg {
   transition: transform 0.3s ease-in-out, left 0.3s ease-in-out;
   position: absolute; 
-  left: 20px;
+  left: 16px;
 }
 
 .iconButton:hover {
   @apply bg-lightBlue;
 }
 
-.iconButton:hover .MuiSvgIcon-root {
-  left: calc(50% - 24px);
+.iconButton:hover svg {
+  left: calc(50% - 16px);
   transform: translateX(50%) scale(1.2);
   color: #dbe2ec;
 }

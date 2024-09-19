@@ -10,6 +10,8 @@ import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import Image from "next/image";
 import Link from "next/link";
 
+
+
 export const Banner: React.FC<IPortfolio> = ({index, title, type, description, image, github, vercel, figma, behance  }) => {
 
     return (
