@@ -10,8 +10,6 @@ import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
 import Image from "next/image";
 import Link from "next/link";
 
-
-
 export const Banner: React.FC<IPortfolio> = ({index, title, type, description, image, github, vercel, figma, behance  }) => {
 
     return (
@@ -22,7 +20,7 @@ export const Banner: React.FC<IPortfolio> = ({index, title, type, description, i
             <div className="relative z-10 w-1/3 h-full">
                 <div className="absolute p-2 bg-lightGreen rounded-full left-0 top-10">
                     {type === "design" && <EmojiObjectsIcon className="text-darkBlue"/>}
-                    {type === "code" && <CodeIcon className="text-darkBlue"/>}
+                    {type === "development" && <CodeIcon className="text-darkBlue"/>}
                 </div>
                 <div className="bg-lightBlue rounded-3xl py-12 px-9 flex flex-col gap-6 ml-5">
                     <h1 className="h3 text-lightGreen">{title}</h1>

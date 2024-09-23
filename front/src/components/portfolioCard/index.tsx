@@ -9,7 +9,6 @@ import { SiFigma } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 import { SiVercel } from "react-icons/si";
 import { SiBehance } from "react-icons/si";
-import Link from "next/link";
 
 
 export const PortfolioCard = (props: IPortfolio) => {

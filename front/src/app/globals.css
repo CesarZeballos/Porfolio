@@ -121,6 +121,10 @@ body {
   @apply text-white border border-darkGreen
  }
 
+ .buttonPrimaryHover {
+  @apply text-white border border-darkGreen bg-darkGreen
+ }
+
  .buttonSecondary {
   @apply px-5 py-2 font-Roboto font-normal text-base text-lightGreen flex flex-row gap-2 items-center
   hover:text-white

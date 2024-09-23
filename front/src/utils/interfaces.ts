@@ -61,7 +61,7 @@ export interface IPortfolio {
     index: number,
     title: string,
     type: string,
-    description: string,
+    description?: string,
     image: string,
     github?: string,
     vercel?: string,
