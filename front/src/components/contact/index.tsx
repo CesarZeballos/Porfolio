@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [contactRef, handleClose]);
+    }, [contactRef]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setData({
@@ -68,9 +68,9 @@ export const Contact: React.FC = () => {
                         <CustomInput label="Name" id="name" name="name" size="small" fullWidth onChange={handleChange}/>
                         <CustomInput label="Email" id="email" name="email" size="small" fullWidth onChange={handleChange}/>
                         <CustomInput label="Message" id="message" name="message" multiline rows={4} size="small" fullWidth onChange={handleChange}/>
-                        <div className="flex flex-row gap-4 mt-2">
-                            <button className="buttonSecondary" onClick={handleCancel}>Maybe later</button>
+                        <div className="flex flex-row gap-4 mt-2 items-center">
                             <button className="buttonPrimary" type="submit">Send</button>
+                            <p className="body text-white">Thanks for your message!</p>
                         </div>
                     </form>
                     <div className="flex flex-col gap-1 w-full px-9">
