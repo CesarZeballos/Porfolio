@@ -29,7 +29,7 @@ export const PortfolioContainer = () => {
     return (
         <div className="sectionContainer">
             <h1 className="h1 text-white">My projects</h1>
-            <div className="flex flex-row gap-4 my-4">
+            <div className="flex flex-row gap-4 mt-4 mb-9">
                 <button className={`buttonPrimary ${filter === "all" ? "buttonPrimaryHover" : ""}`} onClick={() => handleClick("all")}>All Projects</button>
                 <button className={`buttonPrimary ${filter === "design" ? "buttonPrimaryHover" : ""}`} onClick={() => handleClick("design")}><EmojiObjectsIcon />Design</button>
                 <button className={`buttonPrimary ${filter === "development" ? "buttonPrimaryHover" : ""}`} onClick={() => handleClick("development")}><CodeIcon />Development</button>

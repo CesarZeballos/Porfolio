@@ -13,10 +13,10 @@ export const portfolio: IPortfolio[] = [
     },
     {
         index: 0,
-        title: "Licours",
+        title: "Liquors",
         type: "development",
-        description: "Licours is a web platform designed for users to review and discover alcoholic beverages. The development was done in TypeScript using Next.js for the frontend and NestJS with TypeORM for the backend. We implemented Redux for efficient global state management and Firebase for third-party authentication, ensuring secure and seamless access. In addition, Express was used to optimize the API in the backend, achieving a fast and functional user experience.",
-        image: "/portfolio/Licours.jpg",
+        description: "Liquors is a web platform designed for users to review and discover alcoholic beverages. The development was done in TypeScript using Next.js for the frontend and NestJS with TypeORM for the backend. We implemented Redux for efficient global state management and Firebase for third-party authentication, ensuring secure and seamless access. In addition, Express was used to optimize the API in the backend, achieving a fast and functional user experience.",
+        image: "/portfolio/Liquors.jpg",
         github: "https://github.com/tomysykess/FrontDeploy",
         vercel: "https://front-deploy-sage.vercel.app/"
     },
