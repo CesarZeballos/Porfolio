@@ -26,6 +26,12 @@ const globalSlice = createSlice({
                     duration: 1500
                 })
             })
+            .addCase(setContact.pending, (state) => {
+                state.state = 'loading'
+            })
+            .addCase(setContact.rejected, (state) => {
+                state.state = 'failed'
+            })
     }
 })
 

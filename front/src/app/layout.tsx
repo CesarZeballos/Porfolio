@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import { AOSConfig } from "@/utils/AOSConfig";
 import Providers from "@/redux/provider";
 import { Contact } from "@/components/contact";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
               <NavBar />
             </nav>
             {children}
+            <Toaster />
             <Footer />
             <Contact />
           </Providers>
