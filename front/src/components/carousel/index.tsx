@@ -9,8 +9,7 @@ export const Carousel = (prop: IPropChildren) => {
     const carouselRef = useRef<HTMLDivElement>(null)
     const speedScroll = 30
 
-    const infiniteChildren = [...Children.toArray(children), ...Children.toArray(children)]
-
+    const infiniteChildren = [...Children.toArray(children)]
     useEffect (() => {
         const handleScroll = () => {
             if(carouselRef.current) {
