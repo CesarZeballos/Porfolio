@@ -1,23 +1,26 @@
 'use client'
 import { setContactState } from "@/redux/slice";
-import { RootState } from "@/redux/store";
+import { AppDispatch, RootState } from "@/redux/store";
 import { useEffect, useRef, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 
 import CloseIcon from '@mui/icons-material/Close';
 import { CustomInput } from "../customInput";
-import { IContact } from "@/utils/interfaces";
+import { IContact, IContactError } from "@/utils/interfaces";
 
 // icons
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { validateContact } from "@/utils/validate";
+import { setContact } from "@/redux/sliceThunk";
 
 export const Contact: React.FC = () => {
     const contactRef = useRef<HTMLDivElement>(null)
     const [data, setData] = useState<IContact>({} as IContact)
+    const [errors, setErrors] = useState<IContactError>({} as IContactError)
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch<AppDispatch>();
     const showContact = useSelector((state: RootState) => state.global.contactState)
     
     const handleClose = () => {
@@ -37,19 +40,26 @@ export const Contact: React.FC = () => {
     }, [contactRef]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = event.target
         setData({
             ...data,
-            [event.target.name]: event.target.value
+            [name]: value
         })
+
+        const errors = validateContact({ ...data, [name]: value });
+        setErrors(errors);
     }
 
-    const handleSubmit = () => {
-        console.log(data)
-    }
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
 
-    const handleCancel = () => {
-        setData({} as IContact)
-        handleClose()
+        if (!errors.name && !errors.email && !errors.message) {
+            dispatch(setContact(data));
+            setTimeout(() => {
+                setData({} as IContact)
+                handleClose()
+            }, 2000)
+        }
     }
 
     return (

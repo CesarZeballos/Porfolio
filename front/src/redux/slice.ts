@@ -25,9 +25,6 @@ const globalSlice = createSlice({
                     position: 'top-right',
                     duration: 1500
                 })
-                setTimeout(() => {
-                    state.contactState = false
-                }, 3000)
             })
     }
 })
