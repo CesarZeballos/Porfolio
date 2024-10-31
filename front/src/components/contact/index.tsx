@@ -75,9 +75,9 @@ export const Contact: React.FC = () => {
                     </button>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-6 w-full p-9">
                         <p className="h3 text-white">Contact Me</p>
-                        <CustomInput label="Name" id="name" name="name" size="small" fullWidth onChange={handleChange}/>
-                        <CustomInput label="Email" id="email" name="email" size="small" fullWidth onChange={handleChange}/>
-                        <CustomInput label="Message" id="message" name="message" multiline rows={4} size="small" fullWidth onChange={handleChange}/>
+                        <CustomInput label="Name" id="name" name="name" size="small" helperText={errors.name} fullWidth onChange={handleChange}/>
+                        <CustomInput label="Email" id="email" name="email" size="small" helperText={errors.email} fullWidth onChange={handleChange}/>
+                        <CustomInput label="Message" id="message" name="message" multiline rows={4} size="small" helperText={errors.message} fullWidth onChange={handleChange}/>
                         <div className="flex flex-row gap-4 mt-2 items-center">
                             <button className="buttonPrimary" type="submit">Send</button>
                             <p className="body text-white">Thanks for your message!</p>
