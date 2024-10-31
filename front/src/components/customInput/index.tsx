@@ -19,10 +19,13 @@ export const CustomInput = styled(TextField)({
         borderColor: '#C2F22D',
       },
       '& input': {
-      color: '#DBE2EC', // Cambia el color del texto del input aquí
+      color: '#DBE2EC',
     },
     '& textarea': {
         color: '#DBE2EC',
     }
+    },
+    '& .MuiFormHelperText-root': {
+    color: '#C2F22D',
     },
   });
