@@ -51,7 +51,6 @@ const NavBar: React.FC = () => {
                     <IconButton icon={<SlCloudDownload size={16} />} label="Download CV" />
                 </a>
             </div>
-            <button className="iconButton2"><TranslateIcon fontSize="inherit"/></button>
         </div>
     )
 }
